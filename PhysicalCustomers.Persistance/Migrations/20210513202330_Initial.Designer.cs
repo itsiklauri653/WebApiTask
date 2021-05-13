@@ -10,7 +10,7 @@ using PhysicalCustomers.Persistance;
 namespace PhysicalCustomers.Persistance.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210511114651_Initial")]
+    [Migration("20210513202330_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,10 +18,10 @@ namespace PhysicalCustomers.Persistance.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.5")
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.City", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.CityAggregate.City", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -31,12 +31,15 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Cities");
                 });
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.ConnectedCustomer", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.ConnectedCustomerAggregate.ConnectedCustomer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,17 +49,25 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.Property<int>("ConnectionType")
                         .HasColumnType("int");
 
-                    b.Property<int>("CustomerId")
+                    b.Property<int>("CustomerFromId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CustomerToId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("CustomerFromId");
 
-                    b.ToTable("ConnectedCustomer");
+                    b.HasIndex("CustomerToId");
+
+                    b.ToTable("ConnectedCustomers");
                 });
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.Customer", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -84,6 +95,9 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.Property<string>("PersonalId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CityId");
@@ -91,7 +105,7 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.Phone", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.PhoneAggregate.Phone", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -104,6 +118,9 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.Property<string>("Number")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<int>("Type")
                         .HasColumnType("int");
 
@@ -114,20 +131,28 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.ToTable("Phones");
                 });
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.ConnectedCustomer", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.ConnectedCustomerAggregate.ConnectedCustomer", b =>
                 {
-                    b.HasOne("PhysicalCustomers.Domain.Models.Customer", "Customer")
+                    b.HasOne("PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer", "CustomerFrom")
                         .WithMany("ConnectedCustomers")
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("CustomerFromId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer", "CustomerTo")
+                        .WithMany()
+                        .HasForeignKey("CustomerToId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customer");
+                    b.Navigation("CustomerFrom");
+
+                    b.Navigation("CustomerTo");
                 });
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.Customer", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer", b =>
                 {
-                    b.HasOne("PhysicalCustomers.Domain.Models.City", "City")
+                    b.HasOne("PhysicalCustomers.Domain.AggregatesModel.CityAggregate.City", "City")
                         .WithMany()
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -136,9 +161,9 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.Navigation("City");
                 });
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.Phone", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.PhoneAggregate.Phone", b =>
                 {
-                    b.HasOne("PhysicalCustomers.Domain.Models.Customer", "Customer")
+                    b.HasOne("PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer", "Customer")
                         .WithMany("Phones")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -147,7 +172,7 @@ namespace PhysicalCustomers.Persistance.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("PhysicalCustomers.Domain.Models.Customer", b =>
+            modelBuilder.Entity("PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer", b =>
                 {
                     b.Navigation("ConnectedCustomers");
 

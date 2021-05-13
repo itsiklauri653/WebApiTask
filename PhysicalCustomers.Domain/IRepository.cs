@@ -8,6 +8,6 @@ namespace PhysicalCustomers.Domain
 {
     public interface IRepository<T>
     {
-        Task<IQueryable<T>> GetAll();
+        Task<List<T>> GetAll();
     }
 }

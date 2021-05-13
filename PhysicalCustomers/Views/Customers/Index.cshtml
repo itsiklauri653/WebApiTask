@@ -2,8 +2,9 @@
 @using X.PagedList.Mvc.Core;
 @using X.PagedList.Web.Common;
 @using X.PagedList;
+@using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate
 
-@model IPagedList<PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer>
+@model IPagedList<PhysicalCustomers.Application.Customers.CustomerViewModel>
 @{
     ViewData["Title"] = "Customers";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -37,12 +38,32 @@
                 <input type="text" name="personalId" value="@ViewBag.personalId" />
             </div>
             <div>
+                <label>Birth Date</label>
+                <input type="text" name="birthDate" value="@ViewBag.birthDate" />
+            </div>
+            <div>
+                <label>Gender</label>
+                <input type="text" name="gender" value="@ViewBag.gender" />
+            </div>
+            <div>
+                <label>City</label>
+                <input type="text" name="city" value="@ViewBag.city" />
+            </div>
+            <div>
+                <label>Phone Number</label>
+                <input type="text" name="phone" value="@ViewBag.phone" />
+            </div>
+            <div>
+                <label>Connected Customer</label>
+                <input type="text" name="connectedCustomer" value="@ViewBag.connectedCustomer" />
+            </div>
+            <div>
                 <input class="btn btn-primary" type="submit" value="Search" />
             </div>
         }
         <input class="btn btn-secondary" type="button" value="Clear" onclick="location.href='@Url.Action("Index", "Customers")'" />
     </div>
-    </fieldset>
+</fieldset>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -126,7 +147,7 @@
     <a class="btn btn-outline-dark" asp-action="Create">Add new Customer</a>
 </p>
 
-@section Scripts{ 
+@section Scripts{
     <script>
         $("#detailed-Search-Form").attr("hidden", true);
         $("#detailedSearch").click(function () {

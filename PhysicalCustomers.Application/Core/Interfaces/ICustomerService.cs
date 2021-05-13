@@ -9,15 +9,12 @@ using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Application.Core.Interfaces
 {
-    public interface ICustomerService
+    public interface ICustomerService : IBaseService<CustomerViewModel>
     {
-        Task<IQueryable<CustomerViewModel>> GetAll();
-        Task<CustomerViewModel> Get(int? id);
-        Task Create(CustomerViewModel obj, string webRoot);
-        void Update(CustomerViewModel obj, string webRoot);
-        Task Delete(int? id);
         Task DeleteConnectedCustomer(int? customerFromId, int? customerToId);
         Task<ConnectedCustomer> GetConnectedCustomer(int? fromId, int? toId);
         Task AddConnectedCustomer(ConnectedCustomer connectedCustomer);
+        Task Create(CustomerViewModel obj, string webRoot);
+        void Update(CustomerViewModel obj, string webRoot);
     }
 }

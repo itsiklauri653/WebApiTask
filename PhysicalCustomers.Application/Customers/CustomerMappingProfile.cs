@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
-
+using System.Linq;
 
 namespace PhysicalCustomers.Application.Customers
 {

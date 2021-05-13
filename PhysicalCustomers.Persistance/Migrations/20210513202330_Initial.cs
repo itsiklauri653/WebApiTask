@@ -13,7 +13,8 @@ namespace PhysicalCustomers.Persistance.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,7 +33,8 @@ namespace PhysicalCustomers.Persistance.Migrations
                     PersonalId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CityId = table.Column<int>(type: "int", nullable: false),
-                    GraphicalData = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    GraphicalData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -46,20 +48,27 @@ namespace PhysicalCustomers.Persistance.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ConnectedCustomer",
+                name: "ConnectedCustomers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ConnectionType = table.Column<int>(type: "int", nullable: false),
-                    CustomerId = table.Column<int>(type: "int", nullable: false)
+                    CustomerFromId = table.Column<int>(type: "int", nullable: false),
+                    CustomerToId = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ConnectedCustomer", x => x.Id);
+                    table.PrimaryKey("PK_ConnectedCustomers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ConnectedCustomer_Customers_CustomerId",
-                        column: x => x.CustomerId,
+                        name: "FK_ConnectedCustomers_Customers_CustomerFromId",
+                        column: x => x.CustomerFromId,
+                        principalTable: "Customers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_ConnectedCustomers_Customers_CustomerToId",
+                        column: x => x.CustomerToId,
                         principalTable: "Customers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -73,7 +82,8 @@ namespace PhysicalCustomers.Persistance.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Type = table.Column<int>(type: "int", nullable: false),
                     CustomerId = table.Column<int>(type: "int", nullable: false),
-                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -87,9 +97,14 @@ namespace PhysicalCustomers.Persistance.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ConnectedCustomer_CustomerId",
-                table: "ConnectedCustomer",
-                column: "CustomerId");
+                name: "IX_ConnectedCustomers_CustomerFromId",
+                table: "ConnectedCustomers",
+                column: "CustomerFromId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ConnectedCustomers_CustomerToId",
+                table: "ConnectedCustomers",
+                column: "CustomerToId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customers_CityId",
@@ -105,7 +120,7 @@ namespace PhysicalCustomers.Persistance.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ConnectedCustomer");
+                name: "ConnectedCustomers");
 
             migrationBuilder.DropTable(
                 name: "Phones");

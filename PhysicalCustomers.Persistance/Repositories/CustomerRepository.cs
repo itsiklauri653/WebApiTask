@@ -38,13 +38,13 @@ namespace PhysicalCustomers.Persistance.Repositories
                 .FirstOrDefaultAsync(c => c.Id == id && c.Status == Status.IsActive);
         }
 
-        public async Task<IQueryable<Customer>> GetAll()
+        public async Task<List<Customer>> GetAll()
         {
-            return _context.Customers
+            return await _context.Customers
                 .Include(c => c.City)
                 .Include(c => c.Phones.Where(p => p.Status == Status.IsActive))
                 .Include(c => c.ConnectedCustomers.Where(cc => cc.Status == Status.IsActive))
-                .AsNoTracking().Where(x => x.Status == Status.IsActive);
+                .Where(x => x.Status == Status.IsActive).ToListAsync();
         }
 
         public void Update(Customer obj)

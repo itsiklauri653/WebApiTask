@@ -50,6 +50,7 @@ namespace PhysicalCustomers.Application.Core.Implementations
         public async Task Delete(int? id)
         {
             await _unitOfWork.CustomerRepository.Delete(id);
+            await _unitOfWork.SaveChangesAsync();
         }
 
         public async Task DeleteConnectedCustomer(int? customerFromId, int? customerToId)
@@ -59,6 +60,7 @@ namespace PhysicalCustomers.Application.Core.Implementations
                 .Where(c => c.CustomerFromId == customerFromId && c.CustomerToId == customerToId)
                 .FirstOrDefault();
             connectedCustomer.Status = Status.IsDeleted;
+            await _unitOfWork.SaveChangesAsync();
         }
 
         public async Task<CustomerViewModel> Get(int? id)
@@ -68,11 +70,11 @@ namespace PhysicalCustomers.Application.Core.Implementations
             return _mapper.Map<CustomerViewModel>(customer);
         }
 
-        public async Task<IQueryable<CustomerViewModel>> GetAll()
+        public async Task<List<CustomerViewModel>> GetAll()
         {
             var customers = await _unitOfWork.CustomerRepository.GetAll();
 
-            return _mapper.Map<IQueryable<CustomerViewModel>>(customers);
+            return _mapper.Map<List<CustomerViewModel>>(customers);
         }
 
         public async Task<ConnectedCustomer> GetConnectedCustomer(int? fromId, int? toId)

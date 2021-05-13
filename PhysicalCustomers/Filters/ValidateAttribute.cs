@@ -12,13 +12,9 @@ namespace PhysicalCustomers.Web.Filters
         {
             if(!context.ModelState.IsValid)
             {
-                var errorsInModel = context.ModelState
-                    .Where(x => x.Value.Errors.Count > 0)
-                    .ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Errors.Select(x => x.ErrorMessage)).ToArray();
 
-                context.Result = new BadRequestObjectResult(errorsInModel);
-                return;
             }
+           
             await next();
         }
     }

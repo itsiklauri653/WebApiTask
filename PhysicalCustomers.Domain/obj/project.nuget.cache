@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "b0csbI/U1coxRV6WNRocTrUY0DbEXoZhEq7wYDKR4pwcHpiOwNjBpjcXbthZmDl4o15eVdMUMM2HAMiug6SA9Q==",
+  "dgSpecHash": "ICFEDvirOSKTbmTs8+BHEQcXaQF1A8+Arxg5apef8QdSCkFNzxojJjardEdW3jMyryoKJWHunksr9RAWGjJT/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
+  "projectFilePath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ivtsiklauri\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
-    "C:\\Users\\ivtsiklauri\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
-    "C:\\Users\\ivtsiklauri\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.6\\microsoft.aspnetcore.http.features.5.0.6.nupkg.sha512",
-    "C:\\Users\\ivtsiklauri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\ivtsiklauri\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\ivtsiklauri\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
-    "C:\\Users\\ivtsiklauri\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+    "C:\\Users\\vania\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.6\\microsoft.aspnetcore.http.features.5.0.6.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

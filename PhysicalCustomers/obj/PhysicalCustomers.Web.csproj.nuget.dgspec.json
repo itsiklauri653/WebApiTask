@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj": {}
+    "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers\\PhysicalCustomers.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj": {
+    "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj",
         "projectName": "PhysicalCustomers.Application",
-        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj",
-        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\obj\\",
+        "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
-                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
+              "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+                "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
               }
             }
           }
@@ -72,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+    "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
         "projectName": "PhysicalCustomers.Domain",
-        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
-        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\obj\\",
+        "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -140,21 +140,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj": {
+    "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj",
         "projectName": "PhysicalCustomers.Persistance",
-        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj",
-        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\obj\\",
+        "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Persistance\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,8 +168,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
-                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
+              "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+                "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
               }
             }
           }
@@ -186,27 +186,27 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             }
           },
           "imports": [
@@ -224,21 +224,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj": {
+    "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers\\PhysicalCustomers.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers\\PhysicalCustomers.Web.csproj",
         "projectName": "PhysicalCustomers.Web",
-        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj",
-        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\obj\\",
+        "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers\\PhysicalCustomers.Web.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -252,14 +252,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj": {
-                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj"
+              "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj": {
+                "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj"
               },
-              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
-                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
+              "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+                "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
               },
-              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj": {
-                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj"
+              "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj": {
+                "projectPath": "C:\\Users\\vania\\Desktop\\ApiTask\\WebApiTask\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj"
               }
             }
           }
@@ -302,11 +302,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -343,7 +343,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

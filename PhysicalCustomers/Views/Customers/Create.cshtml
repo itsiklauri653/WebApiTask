@@ -43,24 +43,7 @@
                 <span asp-validation-for="BirthDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ConnectedCustomers" class="control-label"></label>
-                @{
-                    var connectedCustomer = new ConnectedCustomer();
-                }
-                <input asp-for="@connectedCustomer.CustomerTo.FirstName" class="form-control" />
-                <span asp-validation-for="@connectedCustomer.CustomerTo.FirstName" class="text-danger"></span>
-
-                <input asp-for="@connectedCustomer.CustomerTo.LastName" class="form-control" />
-                <span asp-validation-for="@connectedCustomer.CustomerTo.LastName" class="text-danger"></span>
-
-                <input asp-for="@connectedCustomer.CustomerTo.BirthDate" class="form-control" />
-                <span asp-validation-for="@connectedCustomer.CustomerTo.BirthDate" class="text-danger"></span>
-                @{ 
-                    Model.ConnectedCustomers.Add(connectedCustomer);
-                }
-            </div>
-            <div class="form-group">
-                <label asp-for="CityId" class="control-label"></label>
+                <label asp-for="City" class="control-label"></label>
                 <select asp-for="CityId" class="form-control">
                     <option selected="selected" value="">Please select</option>
                     @foreach (var city in ViewBag.Cities)
@@ -70,7 +53,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label asp-for="Image" class="control-label file"></label>
+                <label asp-for="GraphicalData" class="control-label file"></label>
                 <input type="file" asp-for="Image" class="form-control-file" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>

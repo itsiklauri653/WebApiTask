@@ -14,19 +14,16 @@ namespace PhysicalCustomers.Web.Controllers
 {
     public class CustomersController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork;
         private readonly ICustomerService _customerService;
-        private readonly IMapper _mapper;
+        private readonly ICityService _cityService;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public CustomersController(IUnitOfWork unitOfWork,
-            IMapper mapper,
+        public CustomersController(ICityService cityService,
             IWebHostEnvironment webHostEnvironment,
             ICustomerService customerService)
         {
             _customerService = customerService;
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
+            _cityService = cityService;
             _webHostEnvironment = webHostEnvironment;
         }
 
@@ -38,6 +35,11 @@ namespace PhysicalCustomers.Web.Controllers
             string firstName,
             string lastName,
             string personalId,
+            string birthDate,
+            string gender,
+            string city,
+            string phone,
+            string connectedCustomer,
             int? page)
         {
             int recordPage = 4;
@@ -66,6 +68,11 @@ namespace PhysicalCustomers.Web.Controllers
             ViewBag.firstName = firstName;
             ViewBag.lastName = lastName;
             ViewBag.personalId = personalId;
+            ViewBag.birthDate = birthDate;
+            ViewBag.gender = gender;
+            ViewBag.city = city;
+            ViewBag.phone = phone;
+            ViewBag.connectedCustomer = connectedCustomer;
 
             var customers = await _customerService.GetAll();
 
@@ -73,7 +80,8 @@ namespace PhysicalCustomers.Web.Controllers
 
             customers = PagingHelpers.Search(customers, keyword);
 
-            customers = PagingHelpers.Search(customers, firstName, lastName, personalId);
+            customers = PagingHelpers.Search(customers, firstName, 
+                lastName, personalId, birthDate, gender, city, phone, connectedCustomer);
 
             var finalResult = customers.ToPagedList(page.Value, recordPage);
             return View(finalResult);
@@ -97,7 +105,7 @@ namespace PhysicalCustomers.Web.Controllers
 
         public async Task<IActionResult> Create()
         {
-            ViewBag.Cities = await _unitOfWork.CityRepository.GetAll();
+            ViewBag.Cities = await _cityService.GetAll();
             return View();
         }
 
@@ -107,10 +115,12 @@ namespace PhysicalCustomers.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                customerViewModel.City = await _cityService.Get(customerViewModel.CityId);
                 await _customerService.Create(customerViewModel, _webHostEnvironment.WebRootPath);
 
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Cities = await _cityService.GetAll();
             return View();
         }
 
@@ -126,7 +136,7 @@ namespace PhysicalCustomers.Web.Controllers
             {
                 return NotFound();
             }
-            ViewBag.Cities = await _unitOfWork.CityRepository.GetAll();
+            ViewBag.Cities = await _cityService.GetAll();
             return View(customer);
         }
 
@@ -141,12 +151,13 @@ namespace PhysicalCustomers.Web.Controllers
 
             if (ModelState.IsValid)
             {
+                customer.City = await _cityService.Get(customer.CityId);
                 _customerService.Update(customer, _webHostEnvironment.WebRootPath);
 
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewBag.Cities = await _unitOfWork.CityRepository.GetAll();
+            ViewBag.Cities = await _cityService.GetAll();
             return View(customer);
         }
 

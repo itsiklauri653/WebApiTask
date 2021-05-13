@@ -19,6 +19,7 @@ using PhysicalCustomers.Persistance;
 using PhysicalCustomers.Persistance.Repositories;
 using PhysicalCustomers.Persistance.UnitOfWork;
 using PhysicalCustomers.Web.Filters;
+using PhysicalCustomers.Web.Middlewares;
 using System;
 using System.Reflection;
 
@@ -33,7 +34,6 @@ namespace PhysicalCustomers.Web
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
@@ -41,6 +41,9 @@ namespace PhysicalCustomers.Web
             services.AddTransient<ICityRepository, CityRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<IBaseService<CustomerViewModel>, CustomerService>();
+            services.AddTransient<ICityService, CityService>();
+            services.AddTransient<IBaseService<City>, CityService>();
             services.AddTransient<IFileManager, FileManager>();
 
             AddMediatR(services);
@@ -54,13 +57,13 @@ namespace PhysicalCustomers.Web
                 {
                     options.Filters.Add<ValidateAttribute>();
                 })
-                .AddFluentValidation(mvcConfig => mvcConfig.RegisterValidatorsFromAssemblyContaining<Startup>());
+                .AddFluentValidation();
 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddTransient<IValidator<CustomerViewModel>, CustomerViewModelValidator>();
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -72,6 +75,7 @@ namespace PhysicalCustomers.Web
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            //app.UseMiddleware<AppExceptionsMiddleware>();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
