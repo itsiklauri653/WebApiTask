@@ -1,0 +1,136 @@
+﻿
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+@using X.PagedList;
+
+@model IPagedList<PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate.Customer>
+@{
+    ViewData["Title"] = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>All Customers</h3>
+<hr />
+<fieldset>
+    <h2>Search</h2>
+    @using (Html.BeginForm())
+    {
+        <p>
+            Please Enter First Name, Last Name or Personal Id
+            <input type="text" name="keyword" value="@ViewBag.keyword" />
+        </p>
+    }
+    <input class="btn btn-outline-primary" id="detailedSearch" type="button" name="name" value="Detailed Search" />
+    <div id="detailed-Search-Form">
+        @using (Html.BeginForm())
+        {
+            <div>
+                <label>First Name</label>
+                <input type="text" name="firstName" value="@ViewBag.firstName" />
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName" value="@ViewBag.lastName" />
+            </div>
+            <div>
+                <label>Personal Id</label>
+                <input type="text" name="personalId" value="@ViewBag.personalId" />
+            </div>
+            <div>
+                <input class="btn btn-primary" type="submit" value="Search" />
+            </div>
+        }
+        <input class="btn btn-secondary" type="button" value="Clear" onclick="location.href='@Url.Action("Index", "Customers")'" />
+    </div>
+    </fieldset>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.ActionLink("First Name", "Index", new { sort = "FirstName", order = ViewBag.order, pagination = ViewBag.sort, keyword = ViewBag.keyword })
+            </th>
+            <th>
+                @Html.ActionLink("Last Name", "Index", new { sort = "LastName", order = ViewBag.order, pagination = ViewBag.sort, keyword = ViewBag.keyword })
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Personal Id
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                Birth Date
+            </th>
+            <th>
+                Graphical Data
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PersonalId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                </td>
+                <td>
+                    <img src="~/images/@item.GraphicalData"
+                         class="rounded-0"
+                         height="100" width="100"
+                         asp-append-version="true" />
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Update</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pagedList">
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new
+         {
+             page,
+             sort = ViewBag.sort,
+             order = ViewBag.order,
+        pagination = ViewBag.sort,
+             keyword = ViewBag.keyword
+         }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+</div>
+<hr />
+<p>
+    <a class="btn btn-outline-dark" asp-action="Create">Add new Customer</a>
+</p>
+
+@section Scripts{ 
+    <script>
+        $("#detailed-Search-Form").attr("hidden", true);
+        $("#detailedSearch").click(function () {
+            $("#detailed-Search-Form").attr("hidden", false);
+        })
+    </script>
+}

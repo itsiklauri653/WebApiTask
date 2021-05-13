@@ -1,0 +1,351 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj",
+        "projectName": "PhysicalCustomers.Application",
+        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj",
+        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
+        "projectName": "PhysicalCustomers.Domain",
+        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj",
+        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj",
+        "projectName": "PhysicalCustomers.Persistance",
+        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj",
+        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj",
+        "projectName": "PhysicalCustomers.Web",
+        "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\PhysicalCustomers.Web.csproj",
+        "packagesPath": "C:\\Users\\ivtsiklauri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ivtsiklauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj": {
+                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Application\\PhysicalCustomers.Application.csproj"
+              },
+              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj": {
+                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Domain\\PhysicalCustomers.Domain.csproj"
+              },
+              "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj": {
+                "projectPath": "C:\\Users\\ivtsiklauri\\Desktop\\PhysicalCustomers\\PhysicalCustomers.Persistance\\PhysicalCustomers.Persistance.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "PagedList.Core": {
+              "target": "Package",
+              "version": "[1.17.4, )"
+            },
+            "PagedList.Core.Mvc": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

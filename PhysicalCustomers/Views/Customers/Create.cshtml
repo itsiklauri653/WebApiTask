@@ -1,0 +1,97 @@
+﻿@model PhysicalCustomers.Application.Customers.CustomerViewModel
+@using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate
+@using PhysicalCustomers.Domain.AggregatesModel.ConnectedCustomerAggregate
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <select asp-for="Gender" asp-items="Html.GetEnumSelectList<GenderType>()" class="form-control">
+                    <option selected="selected" value="">Please select</option>
+                </select>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonalId" class="control-label"></label>
+                <input asp-for="PersonalId" class="form-control" />
+                <span asp-validation-for="PersonalId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConnectedCustomers" class="control-label"></label>
+                @{
+                    var connectedCustomer = new ConnectedCustomer();
+                }
+                <input asp-for="@connectedCustomer.CustomerTo.FirstName" class="form-control" />
+                <span asp-validation-for="@connectedCustomer.CustomerTo.FirstName" class="text-danger"></span>
+
+                <input asp-for="@connectedCustomer.CustomerTo.LastName" class="form-control" />
+                <span asp-validation-for="@connectedCustomer.CustomerTo.LastName" class="text-danger"></span>
+
+                <input asp-for="@connectedCustomer.CustomerTo.BirthDate" class="form-control" />
+                <span asp-validation-for="@connectedCustomer.CustomerTo.BirthDate" class="text-danger"></span>
+                @{ 
+                    Model.ConnectedCustomers.Add(connectedCustomer);
+                }
+            </div>
+            <div class="form-group">
+                <label asp-for="CityId" class="control-label"></label>
+                <select asp-for="CityId" class="form-control">
+                    <option selected="selected" value="">Please select</option>
+                    @foreach (var city in ViewBag.Cities)
+                    {
+                        <option value="@city.Id">@city.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label file"></label>
+                <input type="file" asp-for="Image" class="form-control-file" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+        // Add the following code if you want the name of the file appear on select
+        $(".form-control-file").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".file").addClass("selected").html(fileName);
+        });
+    </script>
+}
