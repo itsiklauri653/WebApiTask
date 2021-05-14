@@ -5,10 +5,8 @@ using PhysicalCustomers.Domain;
 using PhysicalCustomers.Domain.AggregatesModel.BaseAggregate;
 using PhysicalCustomers.Domain.AggregatesModel.ConnectedCustomerAggregate;
 using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Application.Core.Implementations

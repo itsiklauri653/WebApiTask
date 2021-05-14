@@ -1,11 +1,7 @@
-﻿using AutoMapper;
-using PhysicalCustomers.Application.Core.Interfaces;
+﻿using PhysicalCustomers.Application.Core.Interfaces;
 using PhysicalCustomers.Domain;
 using PhysicalCustomers.Domain.AggregatesModel.CityAggregate;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Application.Core.Implementations
@@ -24,7 +20,7 @@ namespace PhysicalCustomers.Application.Core.Implementations
             await _unitOfWork.SaveChangesAsync();
         }
 
-        public async  Task Delete(int? id)
+        public async Task Delete(int? id)
         {
             await _unitOfWork.CityRepository.Delete(id);
             await _unitOfWork.SaveChangesAsync();

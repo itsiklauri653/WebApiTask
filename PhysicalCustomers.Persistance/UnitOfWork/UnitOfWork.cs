@@ -4,10 +4,6 @@ using PhysicalCustomers.Domain.AggregatesModel.ConnectedCustomerAggregate;
 using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
 using PhysicalCustomers.Domain.AggregatesModel.PhoneAggregate;
 using PhysicalCustomers.Persistance.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Persistance.UnitOfWork
@@ -21,7 +17,7 @@ namespace PhysicalCustomers.Persistance.UnitOfWork
         {
             _context = context;
         }
-        public ICityRepository CityRepository 
+        public ICityRepository CityRepository
         {
             get
             {
@@ -35,7 +31,8 @@ namespace PhysicalCustomers.Persistance.UnitOfWork
 
         public IPhoneRepository PhoneRepository { get; }
 
-        public ICustomerRepository CustomerRepository {
+        public ICustomerRepository CustomerRepository
+        {
             get
             {
                 if (customerRepository == null)

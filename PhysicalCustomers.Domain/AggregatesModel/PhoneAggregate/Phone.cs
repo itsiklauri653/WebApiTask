@@ -1,6 +1,4 @@
-﻿
-
-using PhysicalCustomers.Domain.AggregatesModel.BaseAggregate;
+﻿using PhysicalCustomers.Domain.AggregatesModel.BaseAggregate;
 using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
 using System.ComponentModel.DataAnnotations;
 

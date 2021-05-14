@@ -34,3 +34,15 @@ C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net
 C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.dll
 C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\ref\PhysicalCustomers.Domain.dll
 C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.pdb
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\bin\Debug\net5.0\PhysicalCustomers.Domain.deps.json
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\bin\Debug\net5.0\PhysicalCustomers.Domain.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\bin\Debug\net5.0\ref\PhysicalCustomers.Domain.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\bin\Debug\net5.0\PhysicalCustomers.Domain.pdb
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.csprojAssemblyReference.cache
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.AssemblyInfoInputs.cache
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.AssemblyInfo.cs
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\ref\PhysicalCustomers.Domain.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Domain\obj\Debug\net5.0\PhysicalCustomers.Domain.pdb

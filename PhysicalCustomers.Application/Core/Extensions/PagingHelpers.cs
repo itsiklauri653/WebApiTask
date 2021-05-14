@@ -3,13 +3,12 @@ using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Application.Core.Extensions
 {
     public class PagingHelpers
     {
-        public static List<CustomerViewModel> Search(List<CustomerViewModel> customers,string keyword)
+        public static List<CustomerViewModel> Search(List<CustomerViewModel> customers, string keyword)
         {
             if (!string.IsNullOrWhiteSpace(keyword))
             {
@@ -42,7 +41,7 @@ namespace PhysicalCustomers.Application.Core.Extensions
                     c.PersonalId.Contains(personalId)).ToList();
             }
 
-            if(!string.IsNullOrWhiteSpace(birthDate))
+            if (!string.IsNullOrWhiteSpace(birthDate))
             {
                 var date = DateTime.Parse(birthDate);
 
@@ -76,7 +75,7 @@ namespace PhysicalCustomers.Application.Core.Extensions
             if (!string.IsNullOrWhiteSpace(connectedCustomer))
             {
                 customers = customers.Where(c =>
-                    c.ConnectedCustomers.Any(cc => cc.CustomerTo.FirstName.Contains(connectedCustomer) 
+                    c.ConnectedCustomers.Any(cc => cc.CustomerTo.FirstName.Contains(connectedCustomer)
                     || cc.CustomerTo.LastName.Contains(connectedCustomer) ||
                     (cc.CustomerTo.FirstName + cc.CustomerTo.LastName).Contains(connectedCustomer))).ToList();
             }

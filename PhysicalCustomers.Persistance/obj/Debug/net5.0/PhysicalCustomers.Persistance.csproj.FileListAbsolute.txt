@@ -52,3 +52,21 @@ C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Persistance\obj\Debu
 C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\ref\PhysicalCustomers.Persistance.dll
 C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.pdb
 C:\Users\vania\Desktop\ApiTask\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.genruntimeconfig.cache
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\PhysicalCustomers.Persistance.deps.json
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\PhysicalCustomers.Persistance.runtimeconfig.json
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\PhysicalCustomers.Persistance.runtimeconfig.dev.json
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\PhysicalCustomers.Persistance.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\ref\PhysicalCustomers.Persistance.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\PhysicalCustomers.Persistance.pdb
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\PhysicalCustomers.Domain.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\bin\Debug\net5.0\PhysicalCustomers.Domain.pdb
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.csprojAssemblyReference.cache
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.AssemblyInfoInputs.cache
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.AssemblyInfo.cs
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.csproj.CoreCompileInputs.cache
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.csproj.CopyComplete
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\ref\PhysicalCustomers.Persistance.dll
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.pdb
+C:\Users\ivtsiklauri\Desktop\New folder\WebApiTask\PhysicalCustomers.Persistance\obj\Debug\net5.0\PhysicalCustomers.Persistance.genruntimeconfig.cache

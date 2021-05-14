@@ -1,11 +1,7 @@
 ﻿using PhysicalCustomers.Application.Core.Interfaces;
 using PhysicalCustomers.Application.Customers;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Application.Core.Implementations
 {

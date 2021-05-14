@@ -14,10 +14,6 @@ using PhysicalCustomers.Persistance;
 using PhysicalCustomers.Persistance.Repositories;
 using PhysicalCustomers.Persistance.UnitOfWork;
 using PhysicalCustomers.Web.Filters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Web.Extensions
 {

@@ -1,26 +1,12 @@
 using AutoMapper;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PhysicalCustomers.Application.Core.Implementations;
-using PhysicalCustomers.Application.Core.Interfaces;
 using PhysicalCustomers.Application.Customers;
-using PhysicalCustomers.Domain;
-using PhysicalCustomers.Domain.AggregatesModel.CityAggregate;
-using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
-using PhysicalCustomers.Persistance;
-using PhysicalCustomers.Persistance.Repositories;
-using PhysicalCustomers.Persistance.UnitOfWork;
 using PhysicalCustomers.Web.Extensions;
-using PhysicalCustomers.Web.Filters;
-using PhysicalCustomers.Web.Middlewares;
 using System;
 using System.Reflection;
 

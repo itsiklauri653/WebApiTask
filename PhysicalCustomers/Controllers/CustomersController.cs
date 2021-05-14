@@ -1,11 +1,8 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using PhysicalCustomers.Application.Core.Extensions;
 using PhysicalCustomers.Application.Core.Interfaces;
 using PhysicalCustomers.Application.Customers;
-using PhysicalCustomers.Domain;
-using PhysicalCustomers.Domain.AggregatesModel.ConnectedCustomerAggregate;
 using System;
 using System.Threading.Tasks;
 using X.PagedList;
@@ -80,7 +77,7 @@ namespace PhysicalCustomers.Web.Controllers
 
             customers = PagingHelpers.Search(customers, keyword);
 
-            customers = PagingHelpers.Search(customers, firstName, 
+            customers = PagingHelpers.Search(customers, firstName,
                 lastName, personalId, birthDate, gender, city, phone, connectedCustomer);
 
             var finalResult = customers.ToPagedList(page.Value, recordPage);
@@ -191,7 +188,7 @@ namespace PhysicalCustomers.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConnectedCustomer(int fromId, int toId)
         {
-            await _customerService.DeleteConnectedCustomer(fromId,toId);
+            await _customerService.DeleteConnectedCustomer(fromId, toId);
 
             return RedirectToAction(nameof(Index));
         }

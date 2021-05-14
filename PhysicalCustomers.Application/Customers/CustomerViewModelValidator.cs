@@ -41,7 +41,7 @@ namespace PhysicalCustomers.Application.Customers
                 .WithMessage("Birth date must not be empty!!!")
                 .Must(c => IsValidDateOfBirth(c))
                 .WithMessage("Customer must be at least 18 years old!!!");
-                
+
         }
 
         private bool IsValidDateOfBirth(DateTime date)

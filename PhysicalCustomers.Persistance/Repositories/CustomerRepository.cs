@@ -1,10 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PhysicalCustomers.Domain.AggregatesModel.BaseAggregate;
 using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PhysicalCustomers.Persistance.Repositories
