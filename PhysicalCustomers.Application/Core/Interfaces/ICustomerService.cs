@@ -15,6 +15,6 @@ namespace PhysicalCustomers.Application.Core.Interfaces
         Task<ConnectedCustomer> GetConnectedCustomer(int? fromId, int? toId);
         Task AddConnectedCustomer(ConnectedCustomer connectedCustomer);
         Task Create(CustomerViewModel obj, string webRoot);
-        void Update(CustomerViewModel obj, string webRoot);
+        Task Update(CustomerViewModel obj, string webRoot);
     }
 }

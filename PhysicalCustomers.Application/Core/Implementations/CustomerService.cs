@@ -83,7 +83,7 @@ namespace PhysicalCustomers.Application.Core.Implementations
             return customer.ConnectedCustomers.Where(cc => cc.CustomerToId == toId).FirstOrDefault();
         }
 
-        public void Update(CustomerViewModel obj, string webRoot)
+        public async Task Update(CustomerViewModel obj, string webRoot)
         {
             if (obj.Image != null)
             {
@@ -91,7 +91,7 @@ namespace PhysicalCustomers.Application.Core.Implementations
             }
             var customer = _mapper.Map<Customer>(obj);
             _unitOfWork.CustomerRepository.Update(customer);
-            _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync();
         }
     }
 }

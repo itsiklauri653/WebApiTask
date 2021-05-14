@@ -152,7 +152,7 @@ namespace PhysicalCustomers.Web.Controllers
             if (ModelState.IsValid)
             {
                 customer.City = await _cityService.Get(customer.CityId);
-                _customerService.Update(customer, _webHostEnvironment.WebRootPath);
+                await _customerService.Update(customer, _webHostEnvironment.WebRootPath);
 
                 return RedirectToAction(nameof(Index));
             }

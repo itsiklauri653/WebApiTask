@@ -53,6 +53,7 @@
                 </select>
                 <span asp-validation-for="CityId" class="text-danger"></span>
             </div>
+            <input hidden asp-for="GraphicalData" value="@Model.GraphicalData"/>
             <div class="form-group">
                 <label asp-for="Image" class="control-label"></label>
                 <input type="file" asp-for="Image" class="form-control" />

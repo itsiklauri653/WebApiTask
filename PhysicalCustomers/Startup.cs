@@ -18,6 +18,7 @@ using PhysicalCustomers.Domain.AggregatesModel.CustomerAggregate;
 using PhysicalCustomers.Persistance;
 using PhysicalCustomers.Persistance.Repositories;
 using PhysicalCustomers.Persistance.UnitOfWork;
+using PhysicalCustomers.Web.Extensions;
 using PhysicalCustomers.Web.Filters;
 using PhysicalCustomers.Web.Middlewares;
 using System;
@@ -36,32 +37,9 @@ namespace PhysicalCustomers.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-            services.AddTransient<ICustomerRepository, CustomerRepository>();
-            services.AddTransient<ICityRepository, CityRepository>();
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<ICustomerService, CustomerService>();
-            services.AddTransient<IBaseService<CustomerViewModel>, CustomerService>();
-            services.AddTransient<ICityService, CityService>();
-            services.AddTransient<IBaseService<City>, CityService>();
-            services.AddTransient<IFileManager, FileManager>();
-
+            services.AddApplicationServices(Configuration);
             AddMediatR(services);
             AddMapper(services);
-            services.AddDbContext<DataContext>(opt =>
-            {
-                opt.UseSqlServer(Configuration.GetConnectionString("PhysicalCustomerDb"));
-            });
-            services
-                .AddMvcCore(options =>
-                {
-                    options.Filters.Add<ValidateAttribute>();
-                })
-                .AddFluentValidation();
-
-            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-            services.AddTransient<IValidator<CustomerViewModel>, CustomerViewModelValidator>();
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
